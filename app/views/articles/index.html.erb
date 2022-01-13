@@ -1,7 +1,14 @@
-    <h1 class="text-center mt-4">Article Index</h1>
-        
-    <%= render "article" %>
+<h1 class="text-center mt-4">Article Index</h1>
+<div class="apple_pagination">
+    <%= will_paginate @articles, :container => false %>
+  </div>
 
+<%= #will_paginate @articles 
+%> 
+<%= render "article" %>
+<div class="apple_pagination mb-4">
+    <%= will_paginate @articles, :container => false %>
+  </div>
     <%= #, class:"btn btn-success text-center" 
     %>
 
